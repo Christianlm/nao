@@ -55,6 +55,6 @@ class OutlookHelper:
 				attachment = mailItem.Attachments.Item(index + 1)
 				tempPath = os.path.join(tempDir, attachment.FileName)
 				attachment.SaveAsFile(tempPath)
-				log.debug(f"{tempPath=}")
+				log.debug(f"tempPath={tempPath}")
 				return tempPath, tempDir
 		return None, None
